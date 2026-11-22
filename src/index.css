@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-aged-ivory: #EEE6D6;
+    --bg-old-paper: #E3D4BA;
+    --bg-parchment: #F1E8D8;
+    --bg-stone: #C9BCA5;
+    
+    --color-gold: #9B7A3E;
+    --color-gold-light: #BFA15F;
+    --color-gold-faint: rgba(155, 122, 62, 0.18);
+    --color-gold-border: rgba(155, 122, 62, 0.3);
+    --color-burgundy: #64352F;
+    --color-brown: #2E241C;
+    --color-ink: #2E241C;
+    --color-grey: #777064;
+    --color-border: rgba(46, 36, 28, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-aged-ivory);
+    color: var(--color-brown);
+    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Geometric Balance Typography Utilities */
+.font-renaissance {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-technical {
+  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-serif-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-serif-eb {
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+.font-sans-modern {
+  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Geometric Balance Architectural Utilities */
+.antique-border {
+  border: 1px solid rgba(155, 122, 62, 0.3);
+}
+
+.antique-border-faint {
+  border: 1px solid rgba(46, 36, 28, 0.1);
+}
+
+.antique-border-strong {
+  border: 1px solid rgba(155, 122, 62, 0.6);
+}
+
+.vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(46, 36, 28, 0.12) 100%);
+  pointer-events: none;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+/* Texture Utilities & Patterns */
+.bg-aged-ivory {
+  background-color: #EEE6D6;
+}
+
+.bg-old-paper {
+  background-color: #E3D4BA;
+}
+
+.bg-parchment {
+  background-color: #F1E8D8;
+}
+
+.bg-stone-aged {
+  background-color: #C9BCA5;
+}
+
+.text-gold-faded {
+  color: #9B7A3E;
+}
+
+.text-gold-light {
+  color: #BFA15F;
+}
+
+.text-burgundy-old {
+  color: #64352F;
+}
+
+.text-brown-dark {
+  color: #2E241C;
+}
+
+.text-ink {
+  color: #2E241C;
+}
+
+.text-grey-faded {
+  color: #777064;
+}
+
+.border-antique {
+  border-color: rgba(46, 36, 28, 0.12);
+}
+
+.border-gold-antique {
+  border-color: rgba(155, 122, 62, 0.3);
+}
+
+/* Antique Border Flourishes */
+.antique-corner-box {
+  position: relative;
+}
+
+.antique-corner-box::before,
+.antique-corner-box::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #9B7A3E;
+  pointer-events: none;
+}
+
+.antique-corner-box::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid #9B7A3E;
+  border-left: 1px solid #9B7A3E;
+}
+
+.antique-corner-box::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid #9B7A3E;
+  border-right: 1px solid #9B7A3E;
+}
+
+/* Film Grain Texture */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Aged Parchment Texture */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='%23FFFBF2' surfaceScale='1.2'%3E%3CfeDistantLight azimuth='60' elevation='50'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Vintage Vignette */
+.vintage-vignette {
+  box-shadow: inset 0 0 120px rgba(46, 36, 28, 0.08);
+}
+
+/* Archival Dividers */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(155, 122, 62, 0.4) 30%, rgba(155, 122, 62, 0.7) 50%, rgba(155, 122, 62, 0.4) 70%, transparent 100%);
+}
+
+.antique-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(46, 36, 28, 0.2) 25%, rgba(46, 36, 28, 0.3) 50%, rgba(46, 36, 28, 0.2) 75%, transparent 100%);
+}
+
+/* Editorial Drop Cap */
+.drop-cap::first-letter {
+  font-family: 'Cinzel Decorative', 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.75rem;
+  margin-top: 0.2rem;
+  color: #64352F;
+}
+
+/* Subtle Film Flicker Animation (Ultra-subtle) */
+@keyframes subtle-flicker {
+  0%, 100% { opacity: 0.035; }
+  50% { opacity: 0.045; }
+  70% { opacity: 0.03; }
+}
+
+.animate-flicker {
+  animation: subtle-flicker 8s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for Vintage Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EEE6D6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9BCA5;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9B7A3E;
+}
